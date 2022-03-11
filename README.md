@@ -1,2 +1,30 @@
 # connect_qwiklabs
-Bash script to connect to Qwiklabs
+
+This is a Bash script I use to connect to Qwiklabs environment
+within Coursera's Google IT courses.
+
+## Parameters
+- "Student ID": This is static and declared as a variable inside the
+    script since it rarely is changed
+- "IP Address": IP address used to connect to SSH environment, it can
+    be passed as an argument or is asked to the user otherwise
+- "NODEL": If --nodel is passed as an argument, script won't delete
+    previous *.pem files but will use the existing one to connect
+    to the lab
+
+## Examples
+```bash
+./quiklabs.sh
+```
+
+```bash
+./quiklabs.sh --nodel
+```
+
+```bash
+./quiklabs.sh 1.1.1.1
+```
+
+```bash
+./quiklabs.sh --nodel 1.1.1.1
+```
